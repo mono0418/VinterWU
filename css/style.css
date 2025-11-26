@@ -3,5 +3,43 @@ body{
 }
 
 .container{
+display: grid;
+grid-template-columns: repeat(4, 25%);
+grid-template-rows: 20%, 1fr, 1fr, 15%;
+grid-template-areas: 
+'hd hd hd hd'
+'mn mn mn nav'
+'mn mn mn nav'
+'ft ft ft nav';
+}
 
+header{
+    display: flex;
+    grid-area: hd;
+    background-color: blueviolet;
+    height: 150px;
+    align-items: center;
+    justify-content: baseline;
+    flex-direction: column;
+
+}
+
+main{
+    display: flex;
+    grid-area: mn;
+    background-color: bisque;
+    height: 650px;
+
+}
+
+nav{
+    display: flex;
+    width: 25%;
+    grid-area: nav;
+    background-color: brown;
+}
+
+footer{
+    grid-area: ft;
+    background-color: yellowgreen;
 }
