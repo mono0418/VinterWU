@@ -1,45 +1,64 @@
-body{
-    background-color: #3498db;
+body {
+  background-color: #3498db;
 }
 
-.container{
-display: grid;
-grid-template-columns: repeat(4, 25%);
-grid-template-rows: 20%, 1fr, 1fr, 15%;
-grid-template-areas: 
-'hd hd hd hd'
-'mn mn mn nav'
-'mn mn mn nav'
-'ft ft ft nav';
+#container1,
+#container2,
+#container3 {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: 20% 1fr 1fr 0.5fr;
+  grid-template-areas:
+    "hd hd hd hd"
+    "mn mn mn nav"
+    "mn mn mn nav"
+    "ft ft ft nav";
 }
 
-header{
-    display: flex;
-    grid-area: hd;
-    background-color: blueviolet;
-    height: 150px;
-    align-items: center;
-    justify-content: baseline;
-    flex-direction: column;
+#logo{
+  height: 150px;
+  max-width: 150px;
+}
+
+header {
+  display: flex;
+  grid-area: hd;
+  background-color: blueviolet;
+  flex-direction: row;
+  border-radius: 17px;
+  margin-bottom: 10px;
 
 }
 
-main{
-    display: flex;
-    grid-area: mn;
-    background-color: bisque;
-    height: 650px;
+main {
+  padding: 15px;
+  grid-area: mn;
+  background-color: bisque;
+  border-radius: 17px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+nav {
+  padding: 15px;
+  display: flex;
+  grid-area: nav;
+  background-color: brown;
+  border-radius: 17px;
 
 }
 
-nav{
-    display: flex;
-    width: 25%;
-    grid-area: nav;
-    background-color: brown;
+footer {
+  padding-left: 15px;
+  padding-top: 50px;
+  grid-area: ft;
+  background-color: yellowgreen;
+  border-radius: 17px;
+  margin-right: 10px;
 }
 
-footer{
-    grid-area: ft;
-    background-color: yellowgreen;
+h1 {
+  
+
 }
